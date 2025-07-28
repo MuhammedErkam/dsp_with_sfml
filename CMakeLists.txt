@@ -28,4 +28,5 @@ endif()
 find_package(SFML COMPONENTS Graphics Audio Window)
 
 add_executable(main src/main.cpp)
+target_include_directories(main PRIVATE ${PROJECT_SOURCE_DIR}/include)
 target_link_libraries(main PRIVATE SFML::Graphics SFML::Audio SFML::Window)
